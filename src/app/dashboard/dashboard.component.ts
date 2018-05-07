@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {MONTHS} from '../mock-date';
+
+import {Month} from "../month";
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -8,12 +10,19 @@ import {MONTHS} from '../mock-date';
 })
 
 export class DashboardComponent implements OnInit {
-    months = MONTHS;
+
+    months : Month[];
+
     today = Date.now();
 
-  constructor() { }
+    getMonths(): void {
+        this.dataService.getMonths()
+            .subscribe(months => this.months = months);
+    }
+    constructor(public dataService: DataService) { }
 
   ngOnInit() {
+      this.getMonths();
   }
 
 }

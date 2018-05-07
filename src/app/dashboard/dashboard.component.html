@@ -92,7 +92,7 @@
 
       <div *ngFor="let month of months" class=" col-sm-3 col-xs-6">
         <div class="month">
-          <div class="name">{{month.name}}</div>
+          <div class="name"><a routerLink="/month/{{month.id}}">{{month.name}}</a></div>
           <div class="price-for-month"></div>
         </div>
       </div>

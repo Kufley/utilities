@@ -5,7 +5,7 @@ import { MonthComponent }       from './month/month.component';
 
 const routes: Routes = [
     { path: 'year', component: DashboardComponent },
-    { path: 'month', component: MonthComponent },
+    { path: 'month/:id', component: MonthComponent },
     { path: '', redirectTo: '/year', pathMatch: 'full' },
 ];
 

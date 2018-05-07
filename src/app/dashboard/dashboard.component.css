@@ -68,14 +68,16 @@ main {
     cursor: not-allowed;
 }
 
-.name {
+.name{
     padding: 8px;
-    color: #8B8B8B;
-    text-transform: capitalize;
     border-bottom: 1px solid #D1D1D1;
 
 }
-
+.name a{
+    color: #8B8B8B;
+    text-transform: capitalize;
+    text-decoration: none;
+}
 .price-for-month {
     font-size: 16px;
     padding-top: 24px;
